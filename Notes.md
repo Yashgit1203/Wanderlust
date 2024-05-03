@@ -1,0 +1,3 @@
+1. We can use memorystore,connect-moongo package to store the session data in memory. Because we are using the same server for both the frontend and backend, we can use this package to store the session data in memory. This package is not recommended for production use. For production use, we can use redis or mongodb to store the session data.
+
+But for this project, we will use mongoDB to store the session data. We will use the connect-mongo package to store the session data in mongoDB. This package will store the session data in the sessions collection in the database.
