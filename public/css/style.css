@@ -7,19 +7,7 @@ body{
 .container{
     flex: 1;
 }
-/* Navbar */
 
-.navbar{
-    height: 5rem;
-    background-color: #fff;
-}
-.fa-compass{
-    font-size: 2rem;
-    color: #fe424d;
-}
-.nav-link{
-    color: #222222 !important;
-}
 
 /* Footer */
 
@@ -97,6 +85,13 @@ body{
     border: none !important;
 }
 
+@media (max-width:600px){
+    .edit-card{
+        width: 75% !important;
+        margin-left: 1.7rem !important;
+    }
+}
+
 /*Show page*/
 
 .show-img{
@@ -110,6 +105,32 @@ body{
     padding-right: 0 !important;
 }
 
+@media (max-width:600px){
+    .show-title{
+        font-size: 1.32rem;
+        font-weight: 600;
+    }
+    .show-title-par{
+        width: 100% !important;
+        margin-bottom: 0.7rem;
+    }
+    .hr-row{
+        margin-left: 6.5rem;
+    }
+    .show-img{
+        height: 25vh;
+        width: 25vh;
+    }
+    .show-card{
+        width: 75% !important;
+        margin-left: 1.7rem !important;
+    }
+    .edit-btn{
+        width: 5.45rem !important;
+        height: 2.5rem !important;
+        color: white !important;
+    }
+}
 
 /* Map */
 

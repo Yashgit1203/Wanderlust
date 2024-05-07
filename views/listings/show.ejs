@@ -6,8 +6,8 @@
 
     
     <div class="row ">
-        <div class="col-8 offset-3 map-responsive">
-            <h3 class="mt-3">
+        <div class="col-8 offset-3 map-responsive show-title-par">
+            <h3 class="mt-3 show-title">
                 <%= listing.title %>
             </h3>
         </div>  
@@ -45,11 +45,13 @@
             <% } %>
 
         <div class="col-8 offset-3 mb-3 map-responsive">
-            <hr>
+            <div class="hr-row">
+                <hr>
+            </div>
             <% if(curUser){ %>
             <h4>Leave a Review</h4>
-            <form method="post" action="/listings/<%= listing._id %>/reviews" novalidate class="needs-validation">
-                <div>
+            <form method="post" action="/listings/<%= listing._id %>/reviews" novalidate class="needs-validation" >
+                <div class="show-card">
                     <label for="rating" class="form-label" >Rating</label>
                 <fieldset class="starability-slot">
                     <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
@@ -68,19 +70,21 @@
                 </div>
                 
 
-                <div>
+                <div class="show-card">
                     <label for="comments"  class="form-label">Comments</label>
                     <textarea name="review[comment]" id="comments"  class="form-control" cols="35" rows="4" required></textarea>
                     <div class="invalid-feedback">
                         please add some comments for review
                     </div>
                 </div><br>
-                <div>
+                <div class="show-card">
                     <button class="btn btn-outline-dark">Submit</button>
                 </div>
             </form>
 
-            <hr>
+            <div class="hr-row">
+                <hr>
+            </div>
             <% } %>
 
             <% if(listing.reviews.length > 0){ %>

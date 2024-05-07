@@ -1,62 +1,13 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
 <body>
-  <style>
-    #filter{
-      display: flex;
-      white-space: nowrap;
-      margin: 0.7rem 0rem;
-      width: 75%;
-      overflow-x: auto;
-      overflow-y: hidden;
-    }
-    #filter::-webkit-scrollbar{
-      display: none;
-    }
-    .filter{
-      font-size: 0.95rem;
-      text-align: center;
-      margin-left: 2rem;
-      margin-top: 1rem;
-      display: inline-block;
-      opacity: 0.75;
-    }
-    .filter:hover{
-      opacity: 1;
-      cursor: pointer;
-      box-shadow: 0px 2px 0px 0px rgb(191, 191, 191);
-    }
-    .tax-icon{
-      display: none;
-    }
-    .nav2{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 0.4rem 0rem;
-      position: sticky;
-      top: 5rem;
-      z-index: 4;
-      background-color: #fff;
-    }
-    .tax-toggle{
-      padding: 0.85rem 1.8rem;
-      border: 2px solid rgb(191, 191, 191);
-      border-radius: 2rem;
-    }
-    @media (max-width:600px){
-      #filter{
-      width: 100%;
-    }
-    .tax-toggle{
-      margin-left: 1.8rem;
-      font-size: 0.85rem;
-    }
-    
-    }
-  </style>  
   <div class="nav2 ">
+    <div class="nav-left">
+      <span class="scroll-left-btn"> <i class="fa-solid fa-angle-left"></i></span>  
+    </div>
+    <div class="nav-right">
+      <span class="scroll-right-btn"> <i class="fa-solid fa-angle-right"></i></span>  
+    </div>
     <div id="filter">
       <div class="filter">
         <i class="fa-solid fa-ticket"></i>
@@ -136,17 +87,5 @@
     </div>
 </body>
 <script>
-  let taxswitch = document.getElementById("flexSwitchCheckDefault");
-  taxswitch.addEventListener("click",()=>{
-    let taxicons = document.getElementsByClassName("tax-icon");
-    for (taxicon of taxicons){
-      if(taxicon.style.display != "inline"){
-        taxicon.style.display = "inline";
-      }
-      else{
-        taxicon.style.display = "none";
-      }
 
-    }
-  })
 </script>
