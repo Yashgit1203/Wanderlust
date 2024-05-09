@@ -195,3 +195,13 @@
     -webkit-transition: background-position .7s;
     transition: background-position .7s;
   }
+
+
+ @media (max-width:600px){
+  .rev-card{
+    width: 100%;
+  }
+  .rev-author{
+    font-size: 1.05rem;
+  }
+ }

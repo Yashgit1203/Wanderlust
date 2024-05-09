@@ -74,8 +74,8 @@
                 <div class="card-img-overlay"></div> <!--Overlays-->
                 <div class="card-body">
                   <p class="card-text">
-                    <b><%= listing.title %></b> <br>
-                    &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                    <b><%= listing.title %></b> <br>  
+                    &#8377; <span class="card-price"><%= listing.price.toLocaleString("en-IN") %></span><span> / night</span>
                     <i class="tax-icon"> &nbsp; &nbsp; +18% GST</i>
                   </p>
 
@@ -86,6 +86,3 @@
               <% } %>
     </div>
 </body>
-<script>
-
-</script>
