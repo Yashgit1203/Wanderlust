@@ -13,7 +13,7 @@ body{
 
 .f-info-links a{
     text-decoration: none;
-    color: #222222;
+    color: #222222 !important;
     margin-left: 0.4rem;
 }
 .f-info-links a:hover{
@@ -26,6 +26,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    color: #222222 !important;
 }
 .f-info-links,.f-info-socials{
     width: 100%;

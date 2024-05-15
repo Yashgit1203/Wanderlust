@@ -37,85 +37,118 @@
     border-radius: 2rem;
     padding: 0.35rem 4rem ;
   }
-  @media (max-width:600px){
-    #explor{
-      display: none;
-    }
-    input[type="search"]::placeholder{
-      font-size: 0.55rem;
-    }
-    .search-form{
-      margin-top: 1rem;
-    }
-    .navbar-toggler{
-      font-size: 16px;
-    padding: 2px 2px;
-    border: none;
-    }
-    .navbar-toggler:focus{
-      box-shadow: none !important;
-    }
 
-    
-.nav-buttons{
-  width: 2.1rem;
-  height: 2.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  cursor: pointer;
+   /* Navbar-mode */
+
+   .dark-mode {
+    background-color: black;
+    color: white;
 }
-.nav-button{
-  width: 100%;
-  height: 0.25rem;
-  background-color: gray;
+.nav-change-mode{
+    background-color: black;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   
-  transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in;
 }
-.nav-btn-2{
-  position: absolute;
-  left: 0;
-  visibility: hidden;
-  transition-property: all;
-  transition-duration: 1ms;
-  transition-timing-function: ease-in;
+.nav-change-day{
+    background-color: #fff;
 }
-.nav-btn-3{
-  position: absolute;
-  left: 0;
-  top: 40%;
-  transform: rotate(45deg);
+.nav-change-mode i{
+    color: white;
 }
-.nav-btn-3-next{
-  position: absolute;
-  left: 0;
-  top: 20%;
-  transform: rotate(0deg);
+.nav-change-day i{
+    color: black;
 }
-.nav-btn-1{
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  transform: rotate(-45deg);
-
+.nav-change-mode{
+  position: fixed;
+  right: 18.5rem;
 }
-.nav-btn-1-next{
-  position: absolute;
-  left: 0;
-  bottom: 20%;
-  transform: rotate(0deg);
-
-}
-.nav-btn-3i{
-  top: 20%;
-}
-.nav-btn-3i,.nav-btn-2i,.nav-btn-1i{
-  position: absolute;
-}
-.nav-btn-1i{
-  bottom: 20%;
-}
+@media (max-width:600px){
+  .nav-change-mode{
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem;
   }
+  #explor{
+    display: none;
+  }
+  input[type="search"]::placeholder{
+    font-size: 0.55rem;
+  }
+  .search-form{
+    margin-top: 1rem;
+  }
+  .navbar-toggler{
+    font-size: 16px;
+  padding: 2px 2px;
+  border: none;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none !important;
+  }
+  
+  .nav-buttons{
+    width: 2.1rem;
+    height: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer;
+  }
+  .nav-button{
+    width: 100%;
+    height: 0.25rem;
+    background-color: gray;
+
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in;
+  }
+  .nav-btn-2{
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 1ms;
+    transition-timing-function: ease-in;
+  }
+  .nav-btn-3{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: rotate(45deg);
+  }
+  .nav-btn-3-next{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transform: rotate(0deg);
+  }
+  .nav-btn-1{
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: rotate(-45deg);
+  }
+  .nav-btn-1-next{
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    transform: rotate(0deg);
+  }
+  .nav-btn-3i{
+    top: 20%;
+  }
+  .nav-btn-3i,.nav-btn-2i,.nav-btn-1i{
+    position: absolute;
+  }
+  .nav-btn-1i{
+    bottom: 20%;
+  }
+}

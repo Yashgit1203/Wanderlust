@@ -43,3 +43,5 @@
                 btns.children[2].classList.add("nav-btn-3-next");
             }
         })
+
+        

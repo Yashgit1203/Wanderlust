@@ -73,3 +73,55 @@ taxswitch.addEventListener("click", () => {
   else{
     scrollLeftDiv.style.display = "flex";
   }
+
+  let mode_ch = document.querySelector(".nav-change-mode");
+        let nav =document.querySelector(".navbar");
+        let nav2 =document.querySelector(".nav2");
+        let nav2left =document.querySelector(".nav2 .nav-left");
+        let nav2right =document.querySelector(".nav2 .nav-right");
+        let navlink =document.querySelectorAll(".navbar-nav .nav-link");
+        let navcollapse =document.querySelector(".navbar-collapse ");
+        let card =document.querySelectorAll(".card");
+        let element = document.body;
+        mode_ch.addEventListener("click",()=>{
+            element.classList.toggle("dark-mode");
+            if(mode_ch.classList.length == 1){
+                mode_ch.classList.add("nav-change-day");
+                mode_ch.children[0].classList.remove("fa-moon");
+                mode_ch.children[0].classList.add("fa-sun");
+                nav.style.backgroundColor = "black";
+                nav2.style.backgroundColor = "black";
+                nav2left.style.backgroundColor = "black";
+                nav2left.style.boxShadow = "12px 2px 7px black";
+                nav2right.style.backgroundColor = "black";
+                
+                nav2right.style.boxShadow = "-12px 2px 7px black";
+                navlink.forEach((nav)=>{
+                  nav.style.cssText = "color:white !important";
+                })
+                card.forEach((car)=>{
+                  car.style.backgroundColor = "black";
+                  car.style.color = "white";
+                })
+                navcollapse.style.backgroundColor = "black";
+            }
+            else{
+                mode_ch.classList.remove("nav-change-day");
+                mode_ch.children[0].classList.remove("fa-sun");
+                mode_ch.children[0].classList.add("fa-moon");
+                nav.style.backgroundColor = "white";
+                nav2.style.backgroundColor = "white";
+                nav2left.style.backgroundColor = "white";
+                nav2left.style.boxShadow = "12px 2px 7px white";
+                nav2right.style.backgroundColor = "white";
+                nav2right.style.boxShadow = "-12px 2px 7px white";
+                navlink.forEach((nav)=>{
+                  nav.style.cssText = "color:black !important";
+                })
+                card.forEach((car)=>{
+                  car.style.backgroundColor = "white";
+                  car.style.color = "black";
+                })
+                navcollapse.style.backgroundColor = "white";
+              }
+        });

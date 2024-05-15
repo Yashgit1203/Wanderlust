@@ -22,9 +22,7 @@
     cursor: pointer;
     box-shadow: 0px 2px 0px 0px rgb(191, 191, 191);
   }
-  .tax-icon{
-    display: none;
-  }
+
   .nav2{
     display: flex;
     justify-content: space-between;
@@ -40,6 +38,10 @@
     padding: 0.85rem 1.8rem;
     border: 2px solid rgb(191, 191, 191);
     border-radius: 2rem;
+    
+  }
+  .form-check-input{
+    cursor: pointer;
   }
   .scroll-left-btn, .scroll-right-btn{
     border: 2px solid rgb(158, 158, 158);
