@@ -68,6 +68,14 @@
   position: fixed;
   right: 18.5rem;
 }
+.nav-wishlist-icon .solid-heart{
+  font-size: 2rem;
+  color: #fe424d;
+}
+.nav-wishlist-icon{
+  position: fixed;
+  right: 22rem;
+}
 @media (max-width:600px){
   .nav-change-mode{
     position: absolute;

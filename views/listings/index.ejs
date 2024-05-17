@@ -68,21 +68,31 @@
   
     <div class="row row row-cols-lg-3 row-cols-md-2 row-cols-sm-1" >
         <% for(listing of alllistings) {%>
-           <a href="/listings/<%= listing._id %>" class="link-styles">
-            <div class="card col listing-card" >
-                <img src="<%= listing.image.url %>" class="card-img-top" style="height: 20rem;" alt="...">
-                <div class="card-img-overlay"></div> <!--Overlays-->
-                <div class="card-body">
-                  <p class="card-text">
-                    <b><%= listing.title %></b> <br>  
-                    &#8377; <span class="card-price"><%= listing.price.toLocaleString("en-IN") %></span><span> / night</span>
+          
+          <div class="ex-card">
+            <a href="/listings/<%= listing._id %>/wishlist" class="f-left">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart solid-heart"></i> <!--Like popup -->
+            </a>
+            <a href="/listings/<%= listing._id %>" class="link-styles">
+              <div class="card col listing-card" >
+                      <img src="<%= listing.image.url %>" class="card-img-top" style="height: 20rem;" alt="...">
+                      <div class="card-img-overlay"></div> <!--Overlays-->
+                      <div class="card-body">
+                        <p class="card-text">
+                          <b><%= listing.title %></b> <br>  
+                          &#8377; <span class="card-price"><%= listing.price.toLocaleString("en-IN") %></span><span> / night</span>
+                          
+                        </p>
+                       
+                        
+                      </div>
                     
-                  </p>
-
+                      
+                    </div>
+                  </a>
                   
-                </div>
-              </div>
-           </a>
+          </div>
               <% } %>
     </div>
 </body>

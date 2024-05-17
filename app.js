@@ -7,6 +7,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const MONGO_Atlas = process.env.MONGO_ATLAS;
+// const MONGO_Atlas = 'mongodb://127.0.0.1:27017/wanderlust';
 const path = require("path");
 const methodOverride = require("method-override");  
 const ejsMate = require("ejs-mate");
@@ -22,6 +23,7 @@ const User = require("./models/user.js");
 const listingRouter = require("./routes/listing.js")
 const reviewRouter = require("./routes/review.js")
 const userRouter = require("./routes/user.js")
+const wishlistRouter = require("./routes/wishlist.js");
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
@@ -88,6 +90,7 @@ app.use((req,res,next)=>{
 
 
 
+app.use("/listings",wishlistRouter);
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);

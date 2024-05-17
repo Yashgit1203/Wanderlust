@@ -82,6 +82,7 @@ taxswitch.addEventListener("click", () => {
         let navlink =document.querySelectorAll(".navbar-nav .nav-link");
         let navcollapse =document.querySelector(".navbar-collapse ");
         let card =document.querySelectorAll(".card");
+        let card_link =document.querySelectorAll(".card-text");
         let element = document.body;
         mode_ch.addEventListener("click",()=>{
             element.classList.toggle("dark-mode");
@@ -101,7 +102,9 @@ taxswitch.addEventListener("click", () => {
                 })
                 card.forEach((car)=>{
                   car.style.backgroundColor = "black";
-                  car.style.color = "white";
+                })
+                card_link.forEach((card)=>{
+                  card.style.color = "white";
                 })
                 navcollapse.style.backgroundColor = "black";
             }
@@ -120,8 +123,27 @@ taxswitch.addEventListener("click", () => {
                 })
                 card.forEach((car)=>{
                   car.style.backgroundColor = "white";
-                  car.style.color = "black";
+                })
+                card_link.forEach((card)=>{
+                  card.style.color = "black";
                 })
                 navcollapse.style.backgroundColor = "white";
               }
         });
+
+
+// Like popup
+
+let like = document.querySelectorAll('.f-left');
+like.forEach((like_btn)=>{
+    like_btn.children[0].addEventListener("click",()=>{
+        like_btn.children[1].style.animation = 'like ease 500ms';
+        like_btn.children[1].style.transform = 'scale(1)';
+        like_btn.children[0].style.visibility = 'hidden'; 
+    });
+    like_btn.children[1].addEventListener("click",()=>{
+        like_btn.children[1].style.transform = 'scale(0)';
+        like_btn.children[1].style.animation = 'none';
+        like_btn.children[0].style.visibility = 'visible';
+    });
+})

@@ -87,7 +87,12 @@ module.exports.signUp = async (req, res, next) => {
       }
     });
   } catch (e) {
-    req.flash("error", e.message);
+    if (e.code == 11000) {
+      req.flash("error", "Email is already registered with us!");
+    }
+    else{
+      req.flash("error", e.message);
+    }
     res.redirect("/signup");
   }
 };

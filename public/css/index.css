@@ -31,7 +31,7 @@
     margin: 0.4rem 0rem;
     position: sticky;
     top: 5rem;
-    z-index: 4;
+    z-index: 6;
     background-color: #fff;
   }
   .tax-toggle{
@@ -78,6 +78,46 @@
     right: 20rem;
     box-shadow: -12px 2px 7px white;
   }
+
+  /*Like popup*/
+  .ex-card{
+    position: relative;
+  }
+  .f-left{
+    position: absolute;
+    z-index: 4;
+    right: 3rem;
+    top: 1rem;
+}
+
+        .f-left i{
+            cursor: pointer;
+            font-size: 2.5rem;
+        }
+        .f-left i:nth-child(1){
+          /* position: absolute; */
+          color: white;
+          
+        }
+         .f-left i:nth-child(2) {
+            position: absolute;
+            right: 0;
+             top: 0;
+            color: #fe424d;
+            transition: transform ease 0.2s;
+            transform: scale(0);
+            }
+            @keyframes like {
+            from {
+                scale: 1;
+            }
+            27% {
+                scale: 1.2;
+            }
+            to {
+                scale: 1;
+            }
+            }
   @media (max-width:600px){
     #filter{
     width: 100%;
