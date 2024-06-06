@@ -115,6 +115,39 @@ body{
 /* .wishlist-h{
     font-weight: 600;
 } */
+.wish_delete{
+    position: absolute !important;
+    top: 6.2rem !important;
+    right: 4rem !important;
+}
+
+/*Flash.js*/
+
+.alert-success p,.alert-danger p{
+    font-size: 1rem !important;
+    margin :0;
+}
+.alert {
+    position: absolute !important;
+    right: 2rem;
+    top: 6.5rem;
+    z-index: 8;
+    width: fit-content !important;
+    animation: alert-anim 1.5s ease-in-out;
+}
+
+@keyframes alert-anim {
+    from {
+        right: -4rem;
+    }
+    50% {
+        right: 1rem; 
+    }
+    to {
+        right: 2rem;
+    }
+}
+
 @media (max-width:600px){
     .show-title{
         font-size: 1.32rem;
@@ -139,6 +172,23 @@ body{
         width: 5.45rem !important;
         height: 2.5rem !important;
         color: white !important;
+    }
+    .alert-success p, .alert-danger p {
+        font-size: 13px !important;
+    }
+    .alert-success, .alert-danger{
+        position: absolute !important;
+        width: 94% !important;
+        margin: 0 !important;
+        animation: alert-anim 1.5s ease-in-out forwards;
+    }
+    @keyframes alert-anim {
+        from {
+            right: 0rem;
+        }
+        to {
+            right: 1rem;
+        }
     }
 }
 

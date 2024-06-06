@@ -159,4 +159,9 @@
   .nav-btn-1i{
     bottom: 20%;
   }
+  .nav-wishlist-icon{
+    position: fixed;
+    right: 6.8rem;
+    top: 1.5rem;
+  }
 }

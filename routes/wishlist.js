@@ -8,6 +8,12 @@ router.get(
     isLoggedIn,
     wrapAsync(wishlistController.showlistinginwishlist)
   );
+  
+router.delete(
+    "/wishlist/:id",
+    isLoggedIn,
+    wrapAsync(wishlistController.destroy)
+  )
 router.get(
     "/:id/wishlist",
     isLoggedIn,

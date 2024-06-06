@@ -15,7 +15,11 @@
               <h5 class="card-title"><%= wishlist.listing.title %></h5>
               <p class="card-text"><%= wishlist.listing.description %></p>
               <p class="card-text"><small class="text-body-secondary"> &#8377; <%= wishlist.listing.price.toLocaleString("en-IN") %></small></p>
+              <form method="post" class="wish_delete" action="/listings/wishlist/<%=wishlist._id%>?_method=DELETE">
+                <button class="btn btn-dark offset-5">Delete</button>
+            </form>
             </div>
+            
           </div>
         </div>
       </div>

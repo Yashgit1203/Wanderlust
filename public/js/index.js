@@ -147,3 +147,12 @@ like.forEach((like_btn)=>{
         like_btn.children[0].style.visibility = 'visible';
     });
 })
+
+// Flash msg
+
+let alert = document.querySelector(".alert");
+
+setTimeout(()=>{
+  // alert.style.transform = "translateY(0)";
+  alert.style.display = "none";
+  }, 2500);

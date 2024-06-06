@@ -7,14 +7,24 @@ module.exports.addlistingtowishlist= async(req,res)=>{
     let wishlist = new Wishlist({
         like:"checked"
     })
-    wishlist.listing = listing._id;
+    wishlist.listing = listing._id; 
     wishlist.owner = req.user;
-    let value = await wishlist.save();
+    
     // console.log(value);
-    // console.log(await listing.populate("owner"));
-    console.log(req.user.email);
-    console.log(wishlist.owner.email);
-    req.flash("success",`Hotel ${listing.title} has been added to your wishlist! Happy planning!`);
+    let id = wishlist.owner._id;
+    let id2 = wishlist.listing._id;
+    // console.log(id);
+    const idowner = id.toString();
+    const idString = id2.toString();
+    // console.log(idString);
+    let ele = await Wishlist.find({$and:[{'listing':`${idString}`},{'owner':`${idowner}`}]});
+    // console.log(ele.length  );
+    if(ele.length>0){   
+        req.flash("error",`Hotel ${listing.title} is already added to your wishlist!`);
+    }else{
+        let value = await wishlist.save();
+        req.flash("success",`Hotel ${listing.title} has been added to your wishlist! Happy planning!`);
+    }
     res.redirect(`/listings`);
 }
 
@@ -28,5 +38,13 @@ module.exports.showlistinginwishlist = async(req,res)=>{
         console.log(error);
     }
     
+}
+module.exports.destroy = async (req,res)=>{
+
+    let{id}=req.params;
+    let deletedlisting = await Wishlist.findByIdAndDelete(id);
+    console.log(deletedlisting);
+    req.flash("success","Listing deleted successfully from wishlist");
+    res.redirect("/listings/wishlist");
 
 }
