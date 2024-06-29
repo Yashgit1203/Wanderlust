@@ -112,3 +112,4 @@ app.listen(8080,()=>{
     console.log("Sever started at port 8080");
 });
     
+module.exports = app;

@@ -1,3 +1,5 @@
+const { startSession } = require("../../models/user");
+
 let taxswitch = document.getElementById("flexSwitchCheckDefault");
 
 let cprices = document.querySelectorAll(".card-price");
@@ -156,3 +158,16 @@ setTimeout(()=>{
   // alert.style.transform = "translateY(0)";
   alert.style.display = "none";
   }, 2500);
+
+
+gsap.from(".ex-card",{
+  scrollTrigger:{
+    trigger:".ex-card",
+    start:"top center",
+    markers:true
+  },
+  stagger:0.2,
+  opacity:0.2,
+  x:150,
+  duration:2
+});
